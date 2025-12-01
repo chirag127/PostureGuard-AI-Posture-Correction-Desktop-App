@@ -1,36 +1,41 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Node.js
 node_modules/
 
-# Expo
-.expo/
+# Logs
+logs
+*.log
+*.txt
+
+# Production
 dist/
-web-build/
-expo-env.d.ts
+build/
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
+# System Files
 .DS_Store
-*.pem
+.env*
 
-# local env files
-.env*.local
+# IDE
+.vscode/
+*.code-workspace
 
-# typescript
+# Package Managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Tauri
+tauri.conf.json.bak
+
+# Temporary Files
+.tmp/
+temp/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Biome cache
+.biome/
+
+# Typescript
 *.tsbuildinfo
