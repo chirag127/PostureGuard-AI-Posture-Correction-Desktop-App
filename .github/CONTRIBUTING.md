@@ -1,122 +1,61 @@
-# Contributing to PostureGuard-AI-Human-Posture-Analysis-Web-Platform
+# Contributing to PostureGuard-AI-Posture-Correction-Web-App
 
-We welcome contributions to the PostureGuard-AI-Human-Posture-Analysis-Web-Platform! To ensure a high-quality, collaborative, and secure development environment, please adhere to the following guidelines.
+Thank you for your interest in contributing to PostureGuard! We welcome contributions from everyone.
 
-## 1. Code of Conduct
+## Code of Conduct
 
-This project adheres to the Contributor Covenant Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [CODE_OF_CONDUCT_EMAIL_OR_LINK].
+Please read and adhere to our [Code of Conduct](.github/SECURITY.md) to ensure a welcoming and inclusive community.
 
-## 2. Prerequisites
+## How to Contribute
 
-Before contributing, please ensure you have:
-
-*   **Git Installed:** For version control.
-*   **Node.js & npm/yarn/pnpm:** The project utilizes modern JavaScript/TypeScript. Check `package.json` for specific version requirements.
-*   **Apex Toolchain:** Familiarity with the technologies defined in the `AGENTS.md` file (Biome, Vitest, Playwright, Vite, TypeScript).
-*   **Understanding of AI/Computer Vision Concepts:** Basic knowledge of posture analysis, real-time video processing, and AI feedback mechanisms is beneficial.
-
-## 3. Getting Started
-
-1.  **Fork the Repository:** Create your own fork of the `PostureGuard-AI-Human-Posture-Analysis-Web-Platform` repository.
-2.  **Clone Your Fork:** Clone your forked repository locally:
-    ```bash
-    git clone https://github.com/<YOUR_USERNAME>/PostureGuard-AI-Human-Posture-Analysis-Web-Platform.git
-    cd PostureGuard-AI-Human-Posture-Analysis-Web-Platform
-    ```
-3.  **Add Upstream Remote:** Configure your local repository to track the main repository:
-    ```bash
-    git remote add upstream https://github.com/APEX-AI-ARCHITECTS/PostureGuard-AI-Human-Posture-Analysis-Web-Platform.git
-    ```
-4.  **Keep Your Fork Synced:** Regularly fetch changes from the upstream and merge them into your local `main` branch:
-    ```bash
-    git fetch upstream
-    git checkout main
-    git merge upstream/main
-    git push origin main
-    ```
-5.  **Create a Feature Branch:** For every new feature or bug fix, create a dedicated branch:
-    ```bash
+1.  **Fork the Repository:** Create a fork of the `chirag127/PostureGuard-AI-Posture-Correction-Web-App` repository to your GitHub account.
+2.  **Clone Your Fork:** Clone the forked repository to your local machine:
+    bash
+    git clone https://github.com/YOUR-USERNAME/PostureGuard-AI-Posture-Correction-Web-App.git
+    cd PostureGuard-AI-Posture-Correction-Web-App
+    
+3.  **Create a Branch:** Create a new branch for your contribution. Use a descriptive name:
+    bash
     git checkout -b feature/your-feature-name
-    # or
-    git checkout -b fix/your-bug-description
-    ```
-
-## 4. Development Workflow
-
-We follow the **Apex Recursive Perfection Loop** and a strict CI/CD pipeline.
-
-1.  **Code:** Implement your changes on your feature branch.
-2.  **Lint & Format:** Automatically format and lint your code. The project uses **Biome** for both. Ensure your code passes these checks *before* committing.
-    ```bash
-    # Install dependencies (if not already done)
-    npm install
-
-    # Run Biome for checking and applying fixes
-    npx @biomejs/biome check --apply
-    ```
-3.  **Test:** Write and run comprehensive unit and integration tests using **Vitest** and end-to-end tests with **Playwright**.
-    ```bash
-    # Run Vitest tests
-    npm run test:unit
-
-    # Run Playwright tests
-    npm run test:e2e
-    ```
-4.  **Commit:** Commit your changes following the **Conventional Commits** specification.
-    ```bash
-    # Example: feat(posture): Add real-time analysis for side profile
-    git commit -m "feat(posture): Add real-time analysis for side profile"
-    ```
-5.  **Push:** Push your feature branch to your fork.
-    ```bash
+    
+4.  **Make Your Changes:** Implement your changes, ensuring they align with the project's coding standards and architecture. See the [AI Agent Directives](#ai-agent-directives) in the README.
+5.  **Commit Your Changes:** Commit your changes with clear and concise commit messages. Follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
+    bash
+    git commit -m "feat: implemented new feature"
+    
+6.  **Push Your Changes:** Push your branch to your forked repository:
+    bash
     git push origin feature/your-feature-name
-    ```
-6.  **Pull Request:** Open a Pull Request against the `main` branch of the **APEX-AI-ARCHITECTS** repository.
+    
+7.  **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
 
-## 5. Pull Request Guidelines
+## Development Guidelines
 
-*   **Target Branch:** All pull requests should target the `main` branch.
-*   **Clear Description:** Provide a detailed description of your changes, including the problem solved, the solution implemented, and any relevant context.
-*   **Link Issues:** Reference any related GitHub issues using keywords like `Closes #123` or `Fixes #456`.
-*   **Screenshots/GIFs:** For UI changes, include visual examples.
-*   **Tests:** Ensure all tests pass and that new functionality is covered by adequate tests.
-*   **Code Reviews:** Be prepared to respond to feedback from reviewers and make necessary adjustments.
+*   **Code Style:** Follow the project's code style, enforced by Biome for linting and formatting.  Ensure your code passes the linting checks.
+*   **Testing:** Write unit tests using Vitest and E2E tests using Playwright. Ensure your tests pass before submitting a pull request.
+*   **Documentation:** Update the documentation if you add new features or change existing ones. Ensure your changes are well-documented.
+*   **Pull Request Template:** Use the pull request template provided (`.github/PULL_REQUEST_TEMPLATE.md`) to structure your pull request.
+*   **Issue Template:** Use the issue templates provided (`.github/ISSUE_TEMPLATE/`) to report bugs, suggest features, or ask questions.
 
-## 6. Contribution Areas
+## Tech Stack and Tools
 
-We encourage contributions in the following areas:
+This project uses the following technologies:
 
-*   **AI Model Improvements:** Enhancing posture detection accuracy and efficiency.
-*   **Real-time Computer Vision:** Optimizing webcam feed processing.
-*   **User Interface & Experience:** Improving the usability and aesthetic (Liquid Glass + Neo-Brutalist + Material You 3.0).
-*   **Performance Optimization:** Reducing latency and resource consumption.
-*   **Testing & Quality Assurance:** Expanding test coverage and identifying edge cases.
-*   **Documentation:** Improving clarity and completeness of project documentation.
-*   **New Features:** Based on community feedback and the project roadmap.
+*   **Frontend:** React, TypeScript, Vite, TailwindCSS, Tauri.
+*   **Testing:** Vitest (Unit Tests), Playwright (E2E Tests).
+*   **Linting/Formatting:** Biome.
 
-## 7. Reporting Issues
+## Getting Started
 
-*   **Search First:** Before reporting a new issue, search existing issues to see if it has already been reported.
-*   **Clear Title:** Use a concise and descriptive title.
-*   **Detailed Description:** Provide clear steps to reproduce the issue, expected behavior, and actual behavior.
-*   **Environment Details:** Include information about your OS, browser, and relevant software versions.
-*   **Screenshots/Logs:** Attach relevant screenshots or console logs.
+1.  **Install Node.js and npm:** Make sure you have Node.js (version 18 or higher) and npm (version 8 or higher) installed.
+2.  **Install Dependencies:** Run `npm install` in the project root to install the necessary dependencies.
+3.  **Run the Development Server:** Run `npm run dev` to start the development server.
+4.  **Build the Application:** Run `npm run build` to build the application for production.
+5.  **Run Tests:** Run `npm test` for unit tests and `npm run e2e` for end-to-end tests.
 
-## 8. Architectural Principles & Standards
+## Communication
 
-All contributions must adhere to the project's core principles:
+*   For general questions and discussions, please use the issue tracker.
+*   For security-related issues, please refer to the [Security Policy](.github/SECURITY.md).
 
-*   **Apex Technical Authority Standards:** As detailed in `AGENTS.md`.
-*   **SOLID Principles:** Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
-*   **DRY & KISS:** Don't Repeat Yourself, Keep It Simple, Stupid.
-*   **CQS:** Command-Query Separation.
-*   **12-Factor App Principles.**
-*   **Zero-Trust Security Model.**
-*   **Semantic HTML & Accessibility (WCAG 2.1 AA).**
-*   **Performance Optimization (INP < 200ms).**
-
-## 9. Licensing
-
-All contributions are made under the terms of the **CC BY-NC 4.0 License**. By submitting a pull request, you agree to license your contributions under this license.
-
-Thank you for contributing to PostureGuard!
+Thank you again for contributing! Your help is greatly appreciated.
