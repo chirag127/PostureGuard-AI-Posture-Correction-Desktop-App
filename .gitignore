@@ -1,42 +1,40 @@
-# Compiled files and output directories
-build/
-dist/
-.output/
-node_modules/
-*.local
+# Node / Vite / React (Tauri Desktop App)
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-logs/
-*.log
+# Dependencies
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules/
+.pnpm-debug.log*
+
+# Vite / Build artifacts
+dist/
+.env
+.env.*
+!.env.example
+.vite/
+
+# Tauri Specific
+src-tauri/target/
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# IDE and editor files
-.idea/
+# IDE / Editor specific
 .vscode/
+.idea/
 *.iml
+*.ipr
+*.iws
+.project
+.settings/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Build artifacts and temporary files for Tauri
-src-tauri/target/
-
-# Vite specific files
-.vite/
-
-# Biome cache
-.biome/
-
-# Testing artifacts
-coverage/
-*.test*
+# Logs
+*.log
+npm-shrinkwrap.json
+yarn-lock.yaml
+package-lock.json
